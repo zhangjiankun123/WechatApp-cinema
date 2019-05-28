@@ -1,0 +1,157 @@
+/* pages/choose/choose-seat/choose-seat.wxss */
+
+page {
+  background-color: #efefef;
+}
+
+.head-box {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid #fff;
+}
+
+.head-text1 {
+  margin: 10px 0 2px 20px;
+  font-size: 34rpx;
+}
+
+.head-text2 {
+  margin-left: 20px;
+  font-size: 28rpx;
+  color: #a1a1a1;
+}
+
+.hr {
+  height: 1px;
+  width: 90%;
+  background-color: #d9d9d9;
+  margin: 8px auto;
+}
+
+.head-text3 {
+  margin-left: 20px;
+  font-size: 28rpx;
+  color: #a1a1a1;
+  display: flex;
+  vertical-align: -webkit-baseline-middle;
+}
+
+.head-text3 image {
+  height: 35rpx;
+  width: 35rpx;
+  margin-right: 18rpx;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 110px;
+}
+
+.middle-item {
+  background-color: #dcdcdc;
+  width: 200px;
+  font-size: 24rpx;
+}
+
+.middle-item:last-child {
+  width: 60px;
+  color: #a1a1a1;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.seat {
+  text-align: center;
+}
+
+.seat image {
+  margin: 2rpx 3rpx 2rpx 3rpx;
+  height: 45rpx;
+  width: 45rpx;
+}
+
+.num-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #dcdcdc;
+  width: 20px;
+  margin-top: -251px;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
+.num-box-item {
+  margin-bottom: 19rpx;
+  color: white;
+  font-size: 28rpx;
+}
+
+.num-box-item:first-child {
+  margin-top: 20px;
+}
+
+.num-box-item:last-child {
+  margin-bottom: 20px;
+}
+
+.seat-style {
+  display: flex;
+  flex-direction: row;
+}
+
+.seat-style-item {
+  margin-left: 35px;
+  margin-right: 20px;
+}
+
+.seat-style-item image {
+  height: 45rpx;
+  width: 45rpx;
+}
+
+.seat-style-item text {
+  font-size: 24rpx;
+  margin-left: 10px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.footer-text1 {
+  margin: 10px 10px 10px 20px;
+  font-size: 32rpx;
+}
+
+.footer-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-box-item {
+  margin-left: 20px;
+  border: 1px solid #a1a1a1;
+  height: 50rpx;
+  width: 130rpx;
+  text-align: center;
+  font-size: 32rpx;
+}
+
+.footer button {
+  margin: 10px auto 10px auto;
+  background-color: #fe9903;
+  color: #fff;
+  width: 90%;
+}

@@ -1,0 +1,6 @@
+<!--miniprogram/pages/user/advice/submitted/submitted.wxml-->
+<view class='sub_container'>
+  <image src='/images/icon/submit.jpg'></image>
+  <text>非常感谢您的意见和建议</text>
+  <button catchtap='onTapToUser' >关闭</button>
+</view>

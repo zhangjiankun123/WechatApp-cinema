@@ -1,0 +1,177 @@
+.head {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+}
+
+.head-text1 {
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: 38rpx;
+}
+
+.head-text2 {
+  margin-left: 20px;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.head-img-box {
+  margin-top: 70px;
+  height: 140px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.head-img {
+  width: 100%;
+  height: 140px;
+  -webkit-filter: blur(12px);
+}
+
+.head-img-hover {
+  width: 100%;
+  height: 153px;
+  position: absolute;
+  top: 85px;
+  left: 0;
+}
+
+.box {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.box-item {
+  width: 120px;
+  display: inline-block;
+  height: 153px;
+}
+
+.box-item image {
+  width: 80px;
+  height: 113px;
+}
+
+.back {
+  position: absolute;
+  z-index: 9999;
+  top: 190px;
+  left: 181.3px;
+}
+
+.back image {
+  width: 30rpx;
+  height: 20rpx;
+}
+
+.movie-detail {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.movie-detail1 {
+  font-size: 38rpx;
+  color: #ffcb3c;
+}
+
+.movie-detail1 text:first-child {
+  color: #333;
+}
+
+.movie-detail1 text:last-child {
+  font-size: 30rpx;
+}
+
+.movie-detail2 {
+  font-size: 30rpx;
+  color: #333;
+  margin-top: 5px;
+}
+
+.date-box {
+  margin-top: 20px;
+  width: 100%;
+  white-space: nowrap;
+  border: 1px solid #d9d9d9;
+  height: 40px;
+}
+
+.date-box-item {
+  display: inline-block;
+  font-size: 28rpx;
+  text-align: center;
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.y-box {
+  display: flex;
+  margin-top: 10px;
+}
+
+.y-box1 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24rpx;
+}
+
+.y-box1 .text1 {
+  margin-left: 20rpx;
+}
+
+.y-box1 .text2 {
+  color: #a6a6a9;
+  font-size: 28rpx;
+}
+
+.y-box2 {
+  display: flex;
+  flex-direction: column;
+  margin: auto 20px auto 30px;
+}
+
+.y-box2 .text1 {
+  font-size: 32rpx;
+}
+
+.y-box2 .text2 {
+  color: #a6a6a9;
+  font-size: 28rpx;
+}
+
+.y-box3 {
+  display: flex;
+  flex-direction: column;
+  margin: auto 20px auto 40px;
+}
+
+.y-box3 .text1 {
+  color: #a04f5c;
+}
+
+.y-box4 button {
+  font-size: 30rpx;
+  border: 1px solid #ffcb3c;
+  color: #ffcb3c;
+  background-color: white;
+  margin: auto 0 auto 0;
+}
+
+.hr {
+  border-bottom: 1px solid #a6a6a9;
+  margin-top: 10px;
+  margin-left: 20rpx;
+}
+.tpl-else {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.tpl-else image {
+  vertical-align: middle;
+  width: 180px;
+  height: 120px;
+}

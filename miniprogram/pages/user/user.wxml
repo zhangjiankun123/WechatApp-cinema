@@ -1,0 +1,22 @@
+<!--pages/user/user.wxml-->
+<view class="user-container">
+  <view class="category-item personal-info">
+    <block wx:if="{{!hasUserInfo && canIUse}}">
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="user-name">点击此处进行微信授权</button>
+    </block>
+    <block wx:else>
+      <image class="user-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <view class="user-name">
+        <text>{{userInfo.nickName}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="category-item">
+    <block wx:for="{{api}}" wx:key="">
+      <view class="detail-item" catchtap="{{item.tap}}">
+        <text>{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+</view>
+<view ca></view>

@@ -1,0 +1,39 @@
+<!--miniprogram/pages/admin/add-movie2/add-movie2.wxml-->
+<view class='container'>
+  <form bindsubmit="formConfirm">
+    <view class='section'>
+      <text>票价</text>
+      <input placeholder='XX.XX' name="price" />
+    </view>
+
+    <block wx:for='{{i}}' wx:for-item='idx' wx:key='i'>
+      <view style='margin-top:10px;margin-bottom:-10px;'>
+        场次{{idx+1}}</view>
+      <view class='section' style='display:flex'>
+        <view>
+          <text>开场时间：</text>
+          <picker mode="time" value='{{start[idx]}}' start="{{ending[idx-1]}}" end='23:59' bindchange="chooseStart" name='start'>
+            <text wx:if='{{!start[idx]}}'>开场时间</text>
+            <text wx:else>{{start[idx]}}</text>
+          </picker>
+        </view>
+        <view style='margin-left:40px'>
+          <text>收场时间：</text>
+          <picker mode="time" value='{{ending[idx]}}' start="{{start[idx]}}" end='23:59' bindchange="chooseEnding" name='ending'>
+            <text wx:if='{{!ending[idx]}}'>收场时间</text>
+            <text wx:else>{{ending[idx]}}</text>
+          </picker>
+        </view>
+      </view>
+    </block>
+    <view class='button'>
+      <button type='primary' bindtap='add'>增加场次</button>
+    </view>
+    <view class='button'>
+      <button type='warn' bindtap='detel'>减少场次</button>
+    </view>
+    <view class='button'>
+      <button type='primary' form-type='submit'>完成</button>
+    </view>
+  </form>
+</view>

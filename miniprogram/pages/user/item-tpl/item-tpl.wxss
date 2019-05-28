@@ -1,0 +1,49 @@
+.tpl_container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  height: 150px;
+}
+
+.left image {
+  margin: 10px 10px 10px 10px;
+  height: 130px;
+  width: 100px;
+}
+
+.right {
+  margin: 10px 10px 10px 0px;
+  display: flex;
+  flex-direction: column;
+  color: #1f3463;
+}
+
+.right_text1 {
+  margin-top: 10px;
+  font-size: 19px;
+}
+
+.right_text2 {
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  margin-bottom: 5rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.right_text3 {
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+}
+
+.right_text4 {
+  margin-left: 5rpx;
+  font-size: 19px;
+  color: #fcb10e;
+}
+
+.right_text5 {
+  font-size: 35rpx;
+}

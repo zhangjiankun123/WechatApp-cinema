@@ -1,0 +1,78 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"appid": "wxa7c7c99c076d9874",
+	"projectname": "cloud2",
+	"libVersion": "2.2.5",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 5,
+			"list": [
+				{
+					"id": -1,
+					"name": "addMovie",
+					"pathName": "pages/admin/add-movie/add-movie",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "add2",
+					"pathName": "pages/admin/add-movie2/add-movie2",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "1",
+					"pathName": "pages/movie/movie",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "2",
+					"pathName": "pages/movie/movie-detail/movie-detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "3",
+					"pathName": "pages/cinema/cinema",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "3122234",
+					"pathName": "pages/pay/pay-overtime/pay-overtime",
+					"scene": null
+				}
+			]
+		}
+	}
+}

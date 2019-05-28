@@ -1,0 +1,13 @@
+<template name="tem_want">
+  <view class='tpl_container'>
+    <view class='left'>
+      <image src='{{img}}'></image>
+    </view>
+    <view class='right'>
+      <text class='right_text1'>{{title}}</text>
+      <text class='right_text2'>{{E_title}}</text>
+      <text class='right_text3'>观众评分 <text class='right_text4'>{{score}}</text></text>
+      <text class='right_text5'>{{showtime}}大陆上映</text>
+    </view>
+  </view>
+</template>

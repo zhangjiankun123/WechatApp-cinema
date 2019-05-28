@@ -1,0 +1,25 @@
+/* miniprogram/pages/user/advice/submitted/submitted.wxss */
+
+.sub_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sub_container image {
+  margin-top: 80px;
+  height: 100px;
+  width: 100px;
+}
+
+.sub_container text {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.sub_container button {
+  width: 100%;
+  color: white;
+  background-color: #4fb0ac;
+
+}

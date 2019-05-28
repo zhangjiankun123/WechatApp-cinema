@@ -1,0 +1,21 @@
+/* pages/user/order/order.wxss */
+@import 'order-item/order-item-tpl.wxss';
+
+page {
+  background-color: #f7f7f7;
+}
+
+.box{
+  margin-top: 20rpx;
+  border: 1px solid #f7f7f7;
+}
+.tpl-else {
+  margin: 250px auto;
+  text-align: center;
+}
+
+.tpl-else image {
+  vertical-align: middle;
+  width: 180px;
+  height: 120px;
+}

@@ -1,0 +1,21 @@
+<!--pages/user/want/want.wxml-->
+<import src="../item-tpl/item-tpl.wxml" />
+
+<view class='want_container'>
+  <view wx:if="{{movieList.length>0}}" class='tpl'>
+    <text>想看{{movieList.length}}部电影</text>
+    <block wx:for="{{movieList}}" wx:for-item="item" wx:for-index="idx" wx:key="">
+      <view class='tpl'>
+        <view catchtap='onTapToMovieDetail' data-movie-id='{{item.movie_id}}'>
+          <template is="tem_want" data="{{...item}}" />
+        </view>
+      </view>
+    </block>
+  </view>
+  <view wx:else class='tpl-else'>
+    <image src='/images/icon/overtime.jpg'> </image>
+    <view>
+      <text>没有想看的电影</text>
+    </view>
+  </view>
+</view>

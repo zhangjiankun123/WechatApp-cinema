@@ -1,0 +1,87 @@
+/* miniprogram/pages/pay/ready-to-pay/ready-to-pay.wxss */
+
+.ready-container {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+.head {
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  font-size: 34rpx;
+}
+
+.title {
+  font-size: 34rpx;
+  margin-bottom: 10rpx;
+}
+
+.time {
+  font-size: 30rpx;
+  color: #a04f5c;
+  margin-bottom: 10rpx;
+}
+
+.name {
+  font-size: 34rpx;
+  margin-bottom: 10rpx;
+}
+
+.hr {
+  margin-top: 1rpx;
+  margin-bottom: 1rpx;
+  height: 1px;
+  width: 100%;
+  background-color: #3d3d3d;
+}
+
+.detail {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.detail .text1 {
+  font-size: 28rpx;
+}
+
+.detail .text2 {
+  font-size: 32rpx;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  border-top: 1px solid #3d3d3d;
+  border-bottom: 1px solid #3d3d3d;
+  font-size: 32rpx;
+}
+
+.price .text1 {
+  margin-top: auto;
+  margin-bottom: auto;
+  color: #3d3d3d;
+}
+
+.price .text2 {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 80%;
+  text-align: right;
+  color: #a04f5c;
+}
+
+.price .text3 {
+  width: 8%;
+  text-align: right;
+  color: #a04f5c;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.pay {
+  margin-top: 40rpx;
+  background-color: #4FB0AC;
+  color: white;
+  font-family: '微软雅黑';
+}

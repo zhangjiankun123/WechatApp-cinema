@@ -1,0 +1,39 @@
+/* pages/admin/login/login.wxss */
+
+.login_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.header {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.header text {
+  font-size: 25px;
+  color: #666;
+}
+
+form {
+  width: 310px;
+  height: 240px;
+  line-height: 40px;
+}
+
+input {
+  border: 1px solid #ccc;
+  width: 310px;
+  height: 40px;
+}
+
+form text {
+  font-size: 20px;
+  color: #666;
+}
+
+.button {
+  margin-top: 20px;
+}

@@ -1,0 +1,73 @@
+<!--miniprogram/pages/admin/add-movie/add-movie.wxml-->
+<view class='container'>
+  <form bindsubmit="formSubmit">
+    <view class='section'>
+      <text>电影名：</text>
+      <input placeholder='电影名' name="title" bindinput="bindKeyInput" />
+    </view>
+    <view class='section'>
+      <text>电影别名：</text>
+      <input placeholder='电影别名' name="E_title" />
+    </view>
+    <view class='section'>
+      <text>评分：</text>
+      <input placeholder='评分' name="score" />
+    </view>
+    <view class='section'>
+      <text>类型：</text>
+      <input placeholder='类型' name="style" />
+    </view>
+    <view class='section'>
+      <text>地区：</text>
+      <input placeholder='地区' name="area" />
+    </view>
+    <view class='section'>
+      <text>影片时长：</text>
+      <input placeholder='影片时长' name="timelong" />
+    </view>
+
+    <view class='section'>
+      <text>上映日期: </text>
+      <picker mode="date" bindchange="chooseDate" name='showtime'>
+        <text wx:if='{{!showtime}}'>戳此处选择日期</text>
+        <text wx:else>{{showtime}}</text>
+      </picker>
+    </view>
+
+    <view class="uploader" bindtap="doUpload">
+      <button class='button'>上传电影封面</button>
+    </view>
+    <view class='section'>
+      <text>电影封面url：</text>
+      <input placeholder='上传后点此处' bindtap='f5' disabled='true' value='{{img}}' name="img" />
+    </view>
+    <view class='section'>
+      <text>语言：</text>
+      <input placeholder='语言' name="language" />
+    </view>
+    <view class='section'>
+      <text>电影视觉效果：</text>
+      <radio-group name="vision">
+        <label>
+          <radio value="2D" checked='true' />2D</label>
+        <label>
+          <radio value="3D" />3D</label>
+      </radio-group>
+    </view>
+    <view class='section'>
+      <text>导演：</text>
+      <input placeholder='导演' name="director" />
+    </view>
+    <view class='section'>
+      <text>主演：</text>
+      <input placeholder='主演' name="actor" />
+    </view>
+    <view class='section'>
+      <text>影片详情：</text>
+      <textarea placeholder="影片详情" name="detail"/>
+    </view>
+    <view class='button'>
+      <button type='primary' form-type='submit'>下一步</button>
+    </view>
+  </form>
+</view>

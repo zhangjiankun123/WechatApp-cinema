@@ -1,0 +1,17 @@
+<!--pages/user/order/order.wxml-->
+<import src="order-item/order-item-tpl.wxml" />
+<view class='order-container'>
+<view wx:if='{{order.length>0}}'>
+  <block wx:for="{{order}}" wx:for-item="item" wx:key="order">
+    <view class='box' catchtap='onTapToOrderDetail' data-order-num='{{item.order_id}}'>
+      <template is="order-tem" data="{{...item}}" />
+    </view>
+  </block>
+</view>
+    <view wx:else class='tpl-else'>
+      <image src='/images/icon/overtime.jpg'> </image>
+      <view style='margin-top:20rpx;'>
+        <text>您还没下过单呢~</text>
+      </view>
+    </view>
+</view>

@@ -1,0 +1,23 @@
+/* miniprogram/pages/pay/paid/paid.wxss */
+.paid_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paid_container image {
+  margin-top: 80px;
+  height: 100px;
+  width: 100px;
+}
+
+.paid_container text {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.paid_container button {
+  width: 100%;
+  color: white;
+  background-color: #4fb0ac;
+}

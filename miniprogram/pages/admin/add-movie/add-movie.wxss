@@ -1,0 +1,37 @@
+/* miniprogram/pages/admin/add-movie/add-movie.wxss */
+
+form {
+  width: 310px;
+  height: 240px;
+  line-height: 40px;
+  margin-top: 10px;
+}
+.section{
+  margin-top: 10rpx;
+}
+
+input {
+  border: 1px solid #ccc;
+  width: 310px;
+  height: 40px;
+}
+
+form text {
+  font-size: 20px;
+  color: #666;
+}
+
+picker {
+  border: 1px solid #ccc;
+}
+
+.button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  border: 1px solid #ccc;
+  width: 310px;
+  /* height: 40px; */
+}

@@ -1,0 +1,10 @@
+<!--pages/pay/pay-overtime/pay-overtime.wxml-->
+<view class='overtime-container'>
+  <view class='head'>
+    <text>您的订单已超时</text>
+  </view>
+  <view>
+    <image src='/images/icon/overtime-fff.jpg'></image>
+  </view>
+  <button catchtap='onTapBackToChooseMovie'>返回继续购票</button>
+</view>

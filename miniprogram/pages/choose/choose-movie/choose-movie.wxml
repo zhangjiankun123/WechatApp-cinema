@@ -1,0 +1,120 @@
+<!--miniprogram/pages/choose/choose-movie/choose-movie.wxml-->
+
+<view>
+  <!-- 店名地址 -->
+  <view class="head">
+    <view class='head-text1'>
+      <text>{{cinema.name}}</text>
+    </view>
+    <view class='head-text2'>
+      <text>{{cinema.address}}</text>
+    </view>
+  </view>
+
+  <!-- 背景图 -->
+  <view class='head-img-box'>
+    <image class='head-img' src='/images/movie/movie{{movie_id}}.jpg' mode='aspectFill' />
+  </view>
+
+  <!-- 电影列表 -->
+  <view class='head-img-hover'>
+    <scroll-view class="box" scroll-x="true">
+      <block wx:for='{{movieList}}' wx:for-item="item" wx:for-index="idx" wx:key="movieList">
+        <view class='box-item' catchtap='getMovieId' data-movie-id='{{item.movie_id}}' data-num-id='{{idx}}'>
+          <image src='{{item.img}}' />
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <!-- 小三角 -->
+  <!-- <view class="back">
+    <image src='/images/icon/triangle.png' />
+  </view> -->
+
+  <!-- 电影信息 -->
+  <view class='movie-detail'>
+    <view class='movie-detail1'>
+      <text>{{movie[movie_id-1].title}} </text>
+      <text>{{movie[movie_id-1].score}}</text>
+      <text>分</text>
+    </view>
+    <view class='movie-detail2'>
+      <text> {{movie[movie_id-1].timelong}}分钟 |</text>
+      <text> {{movie[movie_id-1].style}} |</text>
+      <text> {{movie[movie_id-1].director}}</text>
+    </view>
+  </view>
+
+  <!-- 日期 -->
+  <view class='date-box'>
+    <view catchtap='chooseDate1' class='date-box-item' data-date="{{date[0]}}">
+      <text style="{{tap1?'color:red':'color:black'}}">今天{{date[0]}}</text>
+    </view>
+    <view catchtap='chooseDate2' class='date-box-item' data-date="{{date[1]}}">
+      <text style="{{tap2?'color:red':'color:black'}}">明天{{date[1]}}</text>
+    </view>
+    <view catchtap='chooseDate3' class='date-box-item' data-date="{{date[2]}}">
+      <text style="{{tap3?'color:red':'color:black'}}">后天{{date[2]}}</text>
+    </view>
+  </view>
+
+  <!-- 场次&购票 -->
+  <view wx:if="{{tap1}}">
+    <view wx:if="{{timeList.length>0}}">
+      <block wx:for="{{timeList}}" wx:for-item="time" wx:key='*' wx:for-index="point">
+        <view class='y-box'>
+          <!-- 开场散场 -->
+          <view class='y-box1'>
+            <text class='text1'>{{time.start}}</text>
+            <text class='text2'>{{time.ending}}散场</text>
+          </view>
+          <!-- 2,3D厅数 -->
+          <view class='y-box2'>
+            <text class='text1'>{{movie[movie_id-1].language}}{{movie[movie_id-1].vision}}</text>
+            <text class='text2'>{{movie_id}}号厅</text>
+          </view>
+          <!-- 票单价 -->
+          <view class='y-box3'>
+            <text class='text1'>￥{{all[idx].price}} </text>
+          </view>
+          <view class='y-box4'>
+            <button catchtap='onTapToChooseSeat' data-point-id="{{point}}">购票</button>
+          </view>
+        </view>
+        <view class='hr'></view>
+      </block>
+    </view>
+    <view wx:else class='tpl-else'>
+      <image src='/images/icon/overtime-fff.jpg'> </image>
+      <view style='margin-top:20rpx;'>
+        <text>该电影今日场次已经播放完</text>
+      </view>
+    </view>
+  </view>
+
+  <view wx:else>
+    <block wx:for="{{all[idx].time}}" wx:for-item="time" wx:key='*' wx:for-index="point">
+      <view class='y-box'>
+        <!-- 开场散场 -->
+        <view class='y-box1'>
+          <text class='text1'>{{time.start}}</text>
+          <text class='text2'>{{time.ending}}散场</text>
+        </view>
+        <!-- 2,3D厅数 -->
+        <view class='y-box2'>
+          <text class='text1'>{{movie[movie_id-1].language}}{{movie[movie_id-1].vision}}</text>
+          <text class='text2'>{{movie_id}}号厅</text>
+        </view>
+        <!-- 票单价 -->
+        <view class='y-box3'>
+          <text class='text1'>￥{{all[idx].price}} </text>
+        </view>
+        <view class='y-box4'>
+          <button catchtap='onTapToChooseSeat' data-point-id="{{point}}">购票</button>
+        </view>
+      </view>
+      <view class='hr'></view>
+    </block>
+  </view>
+</view>

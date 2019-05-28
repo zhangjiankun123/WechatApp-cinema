@@ -1,0 +1,64 @@
+.order-item-tpl-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.head {
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  color: #3c3c3c;
+  font-size: 34rpx;
+}
+
+.hr {
+  margin-left: 20rpx;
+  margin-top: 1rpx;
+  margin-bottom: 1rpx;
+  height: 1px;
+  width: 95%;
+  background-color: #d9d9d9;
+}
+
+.body {
+  display: flex;
+  margin-left: 20rpx;
+}
+
+.left image {
+  height: 180rpx;
+  width: 130rpx;
+  margin-left: -20rpx;
+  border: 20rpx solid white;
+}
+
+.right {
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+}
+
+.right .text1 {
+  font-size: 34rpx;
+}
+
+.right .text2 {
+  color: #3c3c3c;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+
+.right .text3 {
+  color: #3c3c3c;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  margin-right: 40rpx;
+}
+
+.footer {
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  color: #3c3c3c;
+  font-size: 34rpx;
+}

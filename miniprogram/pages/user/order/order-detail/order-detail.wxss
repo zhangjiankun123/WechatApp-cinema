@@ -1,0 +1,91 @@
+/* miniprogram/pages/user/order/order-detail/order-detail.wxss */
+
+page {
+  background-color: #f7f7f9;
+}
+
+.order-detail-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 440px;
+  background-color: #fff;
+  margin: 40rpx auto 40rpx auto;
+  border-radius: 4%;
+  border: 1px solid #d3d3d5;
+}
+
+.head {
+  margin: 30rpx 0 20rpx 30rpx;
+  color: #3c3c3c;
+  font-size: 34rpx;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+
+.body .textfield {
+  display: flex;
+  flex-direction: column;
+}
+
+.textfield .text1 {
+  margin-top: 10rpx;
+  font-size: 36rpx;
+}
+
+.textfield .text2 {
+  color: #ca475b;
+  font-size: 34rpx;
+  margin-top: 20rpx;
+}
+
+.textfield .text3 {
+  font-size: 34rpx;
+  margin-top: 10rpx;
+}
+
+.textfield .text4 {
+  font-size: 34rpx;
+  margin-top: 10rpx;
+}
+
+.body .qrcode {
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+  margin-left: 150rpx;
+}
+
+.hr {
+  margin-top: 1rpx;
+  margin-bottom: 1rpx;
+  height: 1px;
+  width: 100%;
+  background-color: #d9d9d9;
+}
+
+.guanggao {
+
+  height: 250rpx;
+  margin: -20rpx auto 10rpx 20px;
+  width: 90%;
+  border-radius: 5%;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  color: #3c3c3c;
+  border: 1px solid #d3d3d5;
+}
+
+.footer text{
+  margin-left: 40rpx;
+}

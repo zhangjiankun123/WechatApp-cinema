@@ -1,0 +1,75 @@
+/* pages/movie-item/movie-item-tpl.wxss */
+
+.mov_container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #ededed;
+  background-color: #fff;
+}
+
+.mov_box {
+  height: 160px;
+  display: flex;
+  flex-direction: flow;
+}
+
+.left {
+  margin-top: 6.5px;
+  text-align: left;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.left image {
+  width: 100px;
+  height: 145px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+  width: 180px;
+}
+
+.right_text1 {
+  font-size: 18px;
+}
+
+.right_text2 {
+  font-size: 14.5px;
+}
+
+.right_text3 {
+  font-size: 18px;
+  color: #fcb10e;
+}
+
+.right_text4 {
+  margin-top: 5px;
+  font-size: 14.5px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.right_text5 {
+  margin-top: 5px;
+  font-size: 14.5px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+button {
+  margin-top: 62px;
+  background-color: red;
+  height: 35px;
+  width: 4.8em;
+  color: white;
+  text-align: center;
+  margin-right: 0.5em;
+  font-size: 14px;
+}

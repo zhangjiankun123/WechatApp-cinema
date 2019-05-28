@@ -1,0 +1,29 @@
+<!--miniprogram/pages/user/order/order-detail/order-detail.wxml-->
+<view class='order-detail-container'>
+  <view class='head' catchtap='onTapToCinema' data-cinema-id='{{cinema_id}}'>
+    <text>{{order.cinema_name}}</text>
+  </view>
+
+  <view class='hr'></view>
+
+  <view class='body'>
+    <view class='textfield'>
+      <text class='text1'>{{order.movie_title}}</text>
+      <text class='text2'>{{order.date}} {{order.time}} ({{order.language_vision}})</text>
+      <text class='text3'>{{order.where}} {{order.chooseSeat}}</text>
+    </view>
+    <view class='qrcode'>
+      <canvas class='canvas' canvas-id='canvas'></canvas>
+    </view>
+    <view class='textfield'>
+      <text class='text4'>你可以凭此二维码或是订单编号到对应影院取票（妳可以憑此二維碼或是訂單編號到對應影院取票）</text>
+    </view>
+  </view>
+
+</view>
+<image class='guanggao' src='/images/guanggao2.png'/>
+
+<view class='footer'>
+  <text>订单号{{order._id}}</text>
+  <text>总价：{{order.allprice}}元</text>
+</view>

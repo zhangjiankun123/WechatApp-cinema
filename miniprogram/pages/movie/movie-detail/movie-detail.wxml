@@ -1,0 +1,64 @@
+<!--pages/movie/movie-detail/movie-detail.wxml-->
+<import src="../stars/stars-tpl.wxml" />
+
+<view class='movie-detail-container'>
+
+  <view class='head-img-box'>
+    <image class='head-img' src='{{movie.img}}' mode='aspectFill' />
+  </view>
+
+  <!-- 头 -->
+  <view class='head-img-hover'>
+    <text class='title'>{{movie.title}}</text>
+    <view class='Eng-title-box'>
+      <text class='Eng-title'>{{movie.E_title}}</text>
+    </view>
+    <template is="starsTpl" data="{{stars:movie.stars, score:movie.score}}" />
+    <text class='sub-title' style='margin-top: 30rpx;'>{{movie.style}}</text>
+    <text class='sub-title'>{{movie.area + " / " +movie.timelong}}分钟</text>
+    <text class='sub-title'>{{movie.showtime}}大陆上映</text>
+    <!-- 想看&收藏 -->
+    <view class='tool'>
+      <view class='tool-item' catchtap='onWantTap'>
+        <view wx:if="{{wantStatus}}">
+          <image src='/images/icon/wx_app_liked.png' />
+          <text>已想看</text>
+        </view>
+        <view wx:else>
+          <image src='/images/icon/wx_app_like.png' />
+          <text>想看</text>
+        </view>
+      </view>
+      <view class='tool-item' catchtap='onCollectTap'>
+        <view wx:if="{{collectStatus}}">
+          <image src='/images/icon/wx_app_collected.png' />
+          <text>已收藏</text>
+        </view>
+        <view wx:else>
+          <image src='/images/icon/wx_app_collect.png' />
+          <text>收藏</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <image class='movie-img' src='{{movie.img}}' data-src='{{movie.img}}' catchtap='previewImage' />
+  <!-- 导演&主演 -->
+  <view class='summary'>
+    <view class='flex-row'>
+      <text class='mark'>导演</text>
+      <text>{{movie.director}}</text>
+    </view>
+    <view class='flex-row'>
+      <text class='mark'>主演</text>
+      <text>{{movie.actor}}</text>
+    </view>
+  </view>
+  <view class='hr'></view>
+  <view class='synopsis'>
+    <text class='synopsis-font'>剧情简介</text>
+    <text class='summary-content'>{{movie.detail}}</text>
+  </view>
+  <view class='hr'></view>
+
+  <button class='button' catchtap='onTapToChooseCinema'>特惠购票</button>
+</view>

@@ -1,0 +1,20 @@
+<!--pages/admin/login/login.wxml-->
+
+<view class='login_container'>
+  <view class='header'>
+    <text>后台管理系统</text>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class='section'>
+      <text>账号：</text>
+      <input type='text' placeholder='请输入账号' name="username" value='' />
+    </view>
+    <view class='section'>
+      <text>密码:</text>
+      <input password='true' placeholder='请输入密码' name="password" value='' />
+    </view>
+    <view class='button'>
+      <button type='primary' form-type='submit'>登录</button>
+    </view>
+  </form>
+</view>

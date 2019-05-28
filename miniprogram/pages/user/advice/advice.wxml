@@ -1,0 +1,7 @@
+<!--pages/user/advice/advice.wxml-->
+<view class='adv_container'>
+  <form bindsubmit="bindFormSubmit">
+    <textarea placeholder="请留下您宝贵的意见或建议" name="textarea"/>
+    <button form-type="submit">提交</button>
+  </form>
+</view>

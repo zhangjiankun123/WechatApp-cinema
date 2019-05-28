@@ -1,0 +1,28 @@
+<!--pages/movie-item/movie-item-tpl.wxml-->
+<template name="tem_mov">
+  <view class='mov_container'>
+    <view class='mov_box'>
+      <view class='left'>
+        <!--电影海报  -->
+        <image src='{{img}}'> </image>
+      </view>
+      <view class='right'>
+        <view>
+          <text class='right_text1'>{{title}}</text>
+        </view>
+        <view>
+          <text class='right_text2'>观众评分 </text>
+          <text class='right_text3'>{{score}}</text>
+        </view>
+        <view>
+          <text class='right_text4'>导演：{{director}}</text>
+        </view>
+        <view>
+          <text class='right_text5'>主演：{{actor}}</text>
+        </view>
+      </view>
+      <!-- <button class='button' catchtap='onTapToChooseCinema'>购票</button> -->
+      <button class='button'>购票</button>
+    </view>
+  </view>
+</template>

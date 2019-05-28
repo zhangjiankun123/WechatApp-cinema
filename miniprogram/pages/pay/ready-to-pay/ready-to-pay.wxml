@@ -1,0 +1,38 @@
+<!--miniprogram/pages/pay/ready-to-pay/ready-to-pay.wxml-->
+
+<view class='ready-container'>
+
+  <view class='head' style='color: #a04f5c;'>
+    <text>您还未支付，{{wxTimer}}后订单将自动取消</text>
+  </view>
+
+  <view class='title'>
+    <text>{{movieList.title}}</text>
+  </view>
+
+  <view class='time'>
+    <text>{{date}} {{time.start}} ( {{movieList.language}}{{movieList.vision}} )</text>
+  </view>
+  <view class='name'>
+    <text>{{cinema.name}}</text>
+  </view>
+  <view class='hr' />
+
+  <view class='detail'>
+    <view class='text1'>
+      <text>厅座详情</text>
+    </view>
+    <view class='text2'>
+      <text>{{movieList.movie_id}}号厅 </text>
+      <text>{{chooseList}}</text>
+    </view>
+  </view>
+
+  <view class='price'>
+    <text class='text1'>总计</text>
+    <text class='text2'>￥</text>
+    <text class='text3'>{{allprice}}</text>
+  </view>
+
+  <button class='pay' bindtap='onTapToPaid'>确认支付</button>
+</view>

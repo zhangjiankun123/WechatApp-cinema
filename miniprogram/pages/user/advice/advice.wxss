@@ -1,0 +1,16 @@
+/* pages/user/advice/advice.wxss */
+page{
+  background-color:#f8f8f8
+}
+.adv_container textarea {
+  background-color: white;
+  margin: 30px auto 30px auto;
+  border: 3px solid #c1c1c1;
+  height: 300px;
+  width: 300px;
+  font-size: 38rpx;
+}
+.adv_container button {
+  color:white;
+  background-color:#4FB0AC
+}

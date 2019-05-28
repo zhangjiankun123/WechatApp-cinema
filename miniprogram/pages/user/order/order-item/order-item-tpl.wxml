@@ -1,0 +1,37 @@
+<template name='order-tem'>
+  <view class='order-item-tpl-container'>
+    <view class='head' catchtap='onTapToCinema' data-cinema-id='{{cinema_id}}'>
+      {{cinema_name}}
+    </view>
+
+    <view class='hr'></view>
+
+    <view class='body'>
+
+      <view class='left'>
+        <image src='/images/movie/movie{{movie_id}}.jpg' />
+      </view>
+
+      <view class='right'>
+        <view class='text1'>
+          <text>{{movie_title}}</text>
+          <text> {{chooseSeat.length}}张</text>
+        </view>
+        <view class='text2'>
+          <text>{{date}}</text>
+          <text> {{time}}</text>
+        </view>
+        <view class='text3'>
+          <text>{{where}} </text>
+          <text> {{chooseSeat}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='hr'></view>
+
+    <view class='footer'>
+      <text>总价：{{allprice}}元</text>
+    </view>
+  </view>
+</template>

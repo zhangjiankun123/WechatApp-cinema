@@ -1,0 +1,15 @@
+/* miniprogram/pages/choose/choose-cinema/choose-cinema.wxss */
+@import "../../movie/stars/stars-tpl.wxss";
+@import "../../movie/movie-detail/movie-detail.wxss";
+@import "../../cinema/cinema-item/cinema-item-tpl.wxss";
+
+page {
+  background-color: #f4f4f4;
+}
+
+.foot {
+  text-align: center;
+  font-size: 28rpx;
+  color: #333;
+  margin: 12px auto;
+}

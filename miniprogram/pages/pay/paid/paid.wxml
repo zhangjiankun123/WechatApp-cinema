@@ -1,0 +1,6 @@
+<!--miniprogram/pages/pay/paid/paid.wxml-->
+<view class='paid_container'>
+  <image src='/images/icon/submit.jpg'></image>
+  <text>支付成功</text>
+  <button catchtap='onTapToOrder'>查看订单</button>
+</view>

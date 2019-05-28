@@ -1,0 +1,31 @@
+<!--pages/admin/admin.wxml-->
+
+<view class='admin-container'>
+  <view class="head" catchtap='onTapBackToCinema'>
+    <view class='head-text1'>
+      <text>{{cinema.name}}管理员，您好</text>
+    </view>
+    <view class='head-text2'>
+      <text>您的影院有{{movie.length}}部正上映电影</text>
+    </view>
+  </view>
+
+  <!-- 正文 -->
+  <view style='margin-top:71px;'></view>
+  <block wx:for="{{movie}}" wx:for-item="item" wx:key="movie" wx:for-index='idx'>
+    <view class='tpl_container' catchtap='onTapToMovieDetail' data-movie-id='{{item.movie_id}}'>
+      <view class='left'>
+        <image src='{{item.img}}'/>
+      </view>
+      <view class='right'>
+        <text class='right_text1'>{{item.title}}</text>
+        <text class='right_text2'>{{item.E_title}}</text>
+        <text class='right_text3'>观众评分 <text class='right_text4'>{{item.score}}</text></text>
+        <text class='right_text5'>{{item.showtime}}大陆上映</text>
+      </view>
+      <button class='remove' catchtap='onRemove' data-id-x='{{idx}}'>删除</button>
+    </view>
+    <view class='hr'></view>
+  </block>
+  <button type='primary' style='margin-bottom:6px;' catchtap='onTapToAddMovie'>新增电影</button>
+</view>

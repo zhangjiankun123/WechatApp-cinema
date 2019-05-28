@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/user/user",
+    "pages/choose/choose-seat/choose-seat",
+    "pages/choose/choose-movie/choose-movie",
+    "pages/admin/admin",
+    "pages/admin/login/login",
+    "pages/movie/movie-detail/movie-detail",
+    "pages/movie/movie",
+    "pages/user/order/order",
+    "pages/user/want/want",
+    "pages/user/collect/collect",
+    "pages/user/advice/advice",
+    "pages/user/advice/submitted/submitted",
+    "pages/cinema/cinema",
+    "pages/choose/choose-cinema/choose-cinema",
+    "pages/admin/add-movie/add-movie",
+    "pages/user/order/order-detail/order-detail",
+    "pages/pay/ready-to-pay/ready-to-pay",
+    "pages/pay/paid/paid",
+    "pages/pay/pay-overtime/pay-overtime",
+    "pages/admin/add-movie2/add-movie2"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取您当前所在位置"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#4FB0AC",
+    "navigationBarTitleText": "Y江の电影",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "selectedColor": "#4FB0AC",
+    "color": "#333",
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/movie/movie",
+        "text": "电影",
+        "iconPath": "images/icon/home-1.png",
+        "selectedIconPath": "images/icon/home-2.png"
+      },
+      {
+        "pagePath": "pages/cinema/cinema",
+        "text": "影院",
+        "iconPath": "images/icon/order-1.png",
+        "selectedIconPath": "images/icon/order-2.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/icon/user-1.png",
+        "selectedIconPath": "images/icon/user-2.png"
+      }
+    ]
+  }
+}

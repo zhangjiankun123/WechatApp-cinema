@@ -1,0 +1,58 @@
+<!-- <import src="../location/location.wxml" /> -->
+<import src="cinema-item/cinema-item-tpl.wxml" />
+
+<view>
+  <!-- 头部搜索框 -->
+  <view class="weui-search-bar">
+    <text class='city-text'>{{city}}</text>
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="找影院" bindfocus='onBindFocus' bindconfirm='onBindConfirm' bindinput="bindKeyInput" value='{{SearchValue}}' />
+        <view class="weui-icon-clear" wx:if="{{SearchValue.length > 0}}" bindtap="clearSearchValue">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+    </view>
+    <view class="weui-search-bar__cancel-btn" wx:if="{{searchPanelShow}}">
+      <text wx:if="{{SearchValue.length>0}}" catchtap='onBindConfirm'>搜索</text>
+      <text wx:else catchtap='onCancelImgTap'>返回</text>
+    </view>
+  </view>
+  <view wx:if="{{searched}}">
+    <view wx:if='{{cinemaList.length>0}}'>
+      <text style='margin:40rpx auto 40rpx 20rpx;'>搜索"{{SearchValue}}"结果：</text>
+      <block wx:for="{{cinemaList}}" wx:for-item="item" wx:key="cinema">
+        <view catchtap='onTapToChooseMovie' data-cinema-id='{{item.cinema_id}}'>
+          <template is='tem_cin' data="{{...item}}" />
+        </view>
+      </block>
+    </view>
+    <view wx:else style='text-align:center'>
+      <image src='/images/icon/overtime.jpg' style='height:250rpx;width:400rpx;margin-top:300rpx;' />
+      <view>抱歉，没有找到相关内容</view>
+    </view>
+  </view>
+
+  <view wx:if='{{containerShow}}'>
+    <!-- 轮播图  -->
+    <view class='swiper'>
+      <swiper indicator-dots='false' autoplay='true' interval='5000' mode='widthFix'>
+        <block wx:for='{{swiper}}' wx:for-item="item" wx:key='swiper'>
+          <swiper-item catchtap='onTapToMovieDetail' data-movie-id='{{item.movie_id}}'>
+            <image src='{{item.img}}' />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <block wx:for="{{cinema}}" wx:for-item="item" wx:key="cinema">
+      <view catchtap='onTapToChooseMovie' data-cinema-id='{{item.cinema_id}}'>
+        <template is='tem_cin' data="{{...item}}" />
+      </view>
+    </block>
+    <!-- 底部 -->
+    <view class='foot'>
+      <text>—————  没有更多了  —————</text>
+    </view>
+  </view>
+</view>

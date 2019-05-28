@@ -1,0 +1,19 @@
+<template name='tem_cin'>
+  <view class='cin_container'>
+    <view class='cin_box'>
+      <view class='left'>
+        <view>
+          <text class='left_text1'>{{name}}</text>
+        </view>
+        <view>
+          <text class='left_text2'>{{address}}</text>
+        </view>
+      </view>
+      <view class='right'>
+        <text class='right_text1'>{{price}}</text>
+        <text class='right_text2'>元</text>
+        <text class='right_text3'> 起</text>
+      </view>
+    </view>
+  </view>
+</template>

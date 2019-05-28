@@ -1,0 +1,78 @@
+<!--pages/choose/choose-seat/choose-seat.wxml-->
+<view>
+  <!-- 电影名 日期 时间 -->
+  <view class="head-box">
+    <view class='head-text1'>
+      <text>{{movie.title}}</text>
+    </view>
+    <view class='head-text2'>
+      <text>日期{{date}} {{time.start}} {{movie.language}}{{movie.vision}} {{cinema.address}}</text>
+    </view>
+    <view class='hr'></view>
+    <view class='head-text3'>
+      <image src='/images/icon/3Dlogo.png'></image>
+      <text wx:if="{{is3D}}">3D眼睛需自备或到影院自行购买</text>
+      <text wx:else>本场电影为2D无需佩戴3D眼镜</text>
+    </view>
+  </view>
+
+  <!-- 影厅 银幕 -->
+  <view class='middle'>
+    <view class='middle-item'>{{movie.movie_id}}号厅</view>
+    <view class='middle-item'>银幕中央</view>
+  </view>
+
+  <!-- 中间座位 -->
+  <view class='seat'>
+    <view wx:for="{{seat}}" wx:for-item="item" wx:for-index="idy" wx:key='y'>
+      <image wx:for="{{item}}" wx:for-item="color" wx:for-index="idx" wx:key='x' src="/images/icon/seat{{color}}.png" catchtap='onTapToChooseSeat' data-seat-x='{{idx+1}}' data-seat-y='{{idy+1}}'>
+      </image>
+    </view>
+  </view>
+
+  <!-- 中间虚线 -->
+  <view class='hr-y' style='width:50%;height: 240px;;border-right: 2rpx dashed #a7a8a8;margin-top:-230px;'></view>
+
+  <!-- 左侧数字 -->
+  <view class='num-box'>
+    <block wx:for="{{seat}}" wx:for-item="item" wx:for-index="idy" wx:key='*'>
+      <text class="num-box-item">{{idy+1}}</text>
+    </block>
+  </view>
+
+  <!-- 座位类型 -->
+  <view class='seat-style'>
+    <view class='seat-style-item'>
+      <image src='/images/icon/seat0.png' />
+      <text>可选</text>
+    </view>
+    <view class='seat-style-item'>
+      <image src='/images/icon/seat1.png' />
+      <text>不可选</text>
+    </view>
+    <view class='seat-style-item'>
+      <image src='/images/icon/seat2.png' />
+      <text>已选</text>
+    </view>
+  </view>
+
+  <!-- 购票 -->
+  <view class='footer'>
+    <view wx:if="{{chooseList.length>0}}">
+      <view class='footer-text1'>
+        <text>已选座位</text>
+      </view>
+      <view class="footer-box">
+        <block wx:for="{{chooseList}}" wx:for-item="item" wx:key="*">
+          <view class='footer-box-item'>
+            <text>{{item}}</text>
+          </view>
+        </block>
+      </view>
+      <button catchtap='onTapToReadyToPay'>￥{{chooseList.length*price}}确定选座</button>
+    </view>
+    <view wx:else>
+      <button disabled="true">请先选座</button>
+    </view>
+  </view>
+</view>
